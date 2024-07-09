@@ -9,12 +9,10 @@ public class ConsumoRequisicao {
         ObjectMapper mapper = new ObjectMapper();
         var modulo = mapper.readTree(json);
         var receptor = modulo.get("results").get(0);
-        // Adicionar log para ver o conteúdo do receptor JSON
         System.out.println("Receptor JSON: " + receptor.toString());
 
         LivroDTO livroDTO = mapper.treeToValue(receptor, LivroDTO.class);
 
-        // Adicionar log para ver o objeto LivroDTO mapeado
         System.out.println("LivroDTO criado: " + livroDTO.toString());
 
         return livroDTO;
