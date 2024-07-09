@@ -93,6 +93,9 @@ pt - Português
 ## Licença
 Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 
+## Badge do desafio
+<img src="https://github.com/oVictorTorres/Literalura/blob/main/literalura/literalura/badge%20literalura.png?raw=true">
+
 ## Funcionalidades a serem inseridas 
 - Gerar estatísticas
 
