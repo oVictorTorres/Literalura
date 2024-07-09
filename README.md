@@ -10,7 +10,6 @@ Este projeto foi desenvolvido para gerenciar livros e autores utilizando o frame
 
 - **Java 22.0.1**
 - **Spring Boot 3.3.1**
-- **Hibernate 6.5.2.Final**
 - **PostgreSQL**
 - **Maven**
 
@@ -32,11 +31,21 @@ Este projeto foi desenvolvido para gerenciar livros e autores utilizando o frame
     ```sh
     cd literalura
 3. Configure o banco de dados no arquivo "application.properties:"
+    
+   Tenha variáveis de ambiente configuradas com seus dados para funcionar.
     ```sh
-    spring.datasource.url=jdbc:postgresql://localhost:5432/seu-database
-    spring.datasource.username=seu-usuario
-    spring.datasource
-4. Compile e execute o projeto
+    spring.application.name=literalura
+    spring.datasource.url=jdbc:postgresql://${DB_HOST}/literalura
+    spring.datasource.username=${DB_USER}
+    spring.datasource.password=${DB_PASSWORD}
+    spring.datasource.driver-class-name=org.postgresql.Driver
+    hibernate.dialect=org.hibernate.dialect.HSQLDialect
+
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=false
+    spring.jpa.format-sql=true
+
+5. Compile e execute o projeto
    ```sh
    mvn spring-boot:run
 ## Uso: 
